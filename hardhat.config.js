@@ -20,7 +20,7 @@ module.exports = {
     rinkeby: {
       url: process.env.RINKEBY_RPC_URL || "",
       accounts:
-        process.env.P2_KEY !== undefined ? [process.env.P2_KEY] : [],
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       chainId: 4,
       blockConfirmations: 6
     },
@@ -34,6 +34,7 @@ module.exports = {
   },
   solidity: {
     compilers:[
+      {version: "0.6.6"},
       {version: "0.8.8"}
     ]
   },
